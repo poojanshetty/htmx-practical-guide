@@ -35,3 +35,5 @@ As mentioned, you can also trigger the request once the element is scrolled into
 You find a complete list of all the modifiers & variations in the official docs: https://htmx.org/docs/#triggers
 
 And, of course, you'll also see hx-trigger (with more advanced configuration) in action later in the course.
+
+[Just for silly commit]
