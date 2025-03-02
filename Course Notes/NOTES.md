@@ -36,4 +36,31 @@ You find a complete list of all the modifiers & variations in the official docs:
 
 And, of course, you'll also see hx-trigger (with more advanced configuration) in action later in the course.
 
-[Just for silly commit]
+
+
+<h1>Setting HTMX Attributes Dynamically (On The Client)</h1>
+In the previous lecture, you learned how to dynamically generate & set HTMX attributes on the server.
+
+You can also do that on the client, with help of client-side JavaScript.
+
+But there's one important thing to note & keep in mind: Unlike on the server, the client-side code will execute after the page was loaded and therefore after HTMX checked for known attributes.
+
+Therefore, whenever you dynamically set or change HTMX attributes with help of client-side JavaScript code, HTMX will ignore those attributes (or, to be precise: It simply won't detect them).
+
+Hence you must make HTMX aware of those attributes. And you can do that manually, by calling `htmx.process(elementWithNewAttributes)` in your JavaScript code (e.g., right after the code that added an HTMX attribute).
+
+Here's an example:
+
+```
+<script>
+  const button = document.querySelector("button");
+  button.setAttribute("hx-get", "/data");
+  htmx.process(button);
+</script>
+```
+
+`htmx` is a globally available variable that's added by HTMX.
+
+Link to official `htmx.process()` documentation: https://htmx.org/api/#process
+
+
