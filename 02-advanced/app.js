@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
             hx-post="/goals"
             hx-target="#goals"
             hx-swap="beforeend"
-            hx-on:submit="document.querySelector('form').reset()"
+            hx-on::after-request="this.reset()"
           >
             <div>
               <label htmlFor="goal">Goal</label>
