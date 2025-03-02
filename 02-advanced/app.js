@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
           </form>
         </section>
         <section>
-          <ul id="goals" hx-swap="outerHTML">
+          <ul id="goals" hx-swap="outerHTML" hx-confirm="Are you sure?">
           ${courseGoals.map(
             (goal) => goalListItem(goal.id, goal.text)
           ).join('')}
