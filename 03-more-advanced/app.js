@@ -31,21 +31,23 @@ app.get('/', (req, res) => {
             </div>
             <div class="control">
               <label for="email">Email</label>
-              <input 
-                hx-post="/validate" 
+              <input
+                hx-post="/validate"
                 hx-target="next p"
-                type="email" 
-                name="email" 
+                hx-params="email"
+                type="email"
+                name="email"
                 id="email" />
               <p class="error"></p>
             </div>
             <div class="control">
               <label for="password">Password</label>
-              <input 
-                hx-post="/validate" 
-                hx-target="next p" 
-                type="password" 
-                name="password" 
+              <input
+                hx-post="/validate"
+                hx-target="next p"
+                hx-params="password"
+                type="password"
+                name="password"
                 id="password" />
               <p class="error"></p>
             </div>
