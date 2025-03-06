@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <main>
-          <form hx-post="/login">
+          <form hx-post="/login" hx-headers='{"x-crsf-token": "abc"}'>
             <div>
               <img src="/images/auth-icon.jpg" alt="A lock icon" />
             </div>
@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
                 hx-post="/validate"
                 hx-target="next p"
                 hx-params="email"
+                hx-headers='{"x-crsf-token": "abc"}'
                 type="email"
                 name="email"
                 id="email" />
@@ -46,6 +47,7 @@ app.get('/', (req, res) => {
                 hx-post="/validate"
                 hx-target="next p"
                 hx-params="password"
+                hx-headers='{"x-crsf-token": "abc"}'
                 type="password"
                 name="password"
                 id="password" />
