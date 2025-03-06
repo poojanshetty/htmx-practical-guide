@@ -112,6 +112,7 @@ app.post('/login', (req, res) => {
       </ul>
     `);
   }
+  res.setHeader("HX-Redirect", "/authenticated");
   res.send();
 });
 
