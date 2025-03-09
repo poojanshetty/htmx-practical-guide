@@ -66,3 +66,6 @@ Link to official `htmx.process()` documentation: https://htmx.org/api/#process
 
 This is a good follow-up course, especially if you're working with Django:
 https://www.udemy.com/course/full-stack-django
+
+Other resources:
+- [HTMX Doc](https://htmx.org/docs/)
